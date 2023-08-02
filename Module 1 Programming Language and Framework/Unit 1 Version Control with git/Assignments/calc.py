@@ -37,3 +37,14 @@ def multiply(a:float , b: float ):
     """
     return a * b 
 
+def divide(a:float , b: float ): 
+    """Divides two number 
+
+    Args:
+        a (float): first number 
+        b (float): second number 
+
+    Returns:
+        float: division of two numbbers 
+    """
+    return a / b 
