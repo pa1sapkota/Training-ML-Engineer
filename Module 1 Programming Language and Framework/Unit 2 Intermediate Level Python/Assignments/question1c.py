@@ -9,4 +9,16 @@ function should return the total cost of all items.
 
 
 def calculate_total_cost(**kwargs): 
-    pass 
+    """Calculates the Total oost of the Items 
+
+    Returns:
+        int: total cost 
+    """
+    total_cost = 0 
+    for key, item in kwargs.items(): 
+        total_cost += item 
+    return total_cost
+
+
+
+print(calculate_total_cost(apple=10, mango =20, banana = 30))
