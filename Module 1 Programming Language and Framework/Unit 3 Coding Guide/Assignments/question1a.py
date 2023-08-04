@@ -35,7 +35,8 @@ class Book:
         self.availability = availability
     
     def __str__(self): 
-        return f"Books Details ; {self.title} Author: {self.author} isbn:{self.isbn} genre: {self.genre} Book availability; {self.availability} "
+        print("-"*100)
+        return f"Books Details :\n{self.title} \nAuthor: {self.author} \nisbn:{self.isbn} \ngenre: {self.genre} \nBook availability; {self.availability} "
     
 
 class LibraryCatalog: 
@@ -53,14 +54,38 @@ class LibraryCatalog:
         """GEt the Details about the Available Books 
         """
         for book in self.books: 
-            if book.availability: #if book is available 
+            # if book.availability: #if book is available 
+            print(book) 
+    
+    
+    def available_books(self):
+        print("The Following Books are available")
+        for book in self.books: 
+            if book.availability: 
                 print(book)
+    def borrow_books(self, book_name): 
+        for book in self.books: 
+            if book.title == book_name: 
+                if book.availability: 
+                    print(f"Books {book_name} is borrowed with isbn {book.isbn}")
+                    book.availability = False 
+                    # print(book.availability)
+                    print("This is working ")
+                    break 
+                else : 
+                    print(f"{book_name} is not Available")
+
+
+
         
 
-b1 = Book("Harry Potter and the deadly Hollow", "JK Rolling", 1536363,"Fiction", True )
-b2 = Book("Harry Potter and the Half Blood  Prince", "JK Rolling", 13263213,"Fiction", False )
-b3 = Book("Harry Potter and the Prisioner of Azkaban ", "JK Rolling", 3123123,"Fiction", True )
-b4 = Book("Harry Potter and the Sccorcers Stone ", "JK Rolling", 312312312,"Fiction", False )
+b1 = Book("Harry Potter and the deadly Hollow", "JK Rolling", 1,"Fiction", True )
+b2 = Book("Harry Potter and the Half Blood  Prince", "JK Rolling", 2,"Fiction", False )
+b3 = Book("Harry Potter and the Prisioner of Azkaban ", "JK Rolling", 3,"Fiction", True )
+b4 = Book("Harry Potter and the Sccorcers Stone", "JK Rolling", 4,"Fiction", True )
+b5 = Book("Harry Potter and the Sccorcers Stone", "JK Rolling", 5,"Fiction", True )
+b6 = Book("Harry Potter and the Sccorcers Stone", "JK Rolling", 6,"Fiction", True )
+
 # print(b1)
 # print(b2)
 # print(b3)
@@ -72,6 +97,11 @@ catalog.add_books(b1)
 catalog.add_books(b2)
 catalog.add_books(b3)
 catalog.add_books(b4)
+catalog.add_books(b5)
+catalog.add_books(b6)
 
+
+# catalog.get_books_details()
+catalog.borrow_books("Harry Potter and the Sccorcers Stone")
 
 catalog.get_books_details()
