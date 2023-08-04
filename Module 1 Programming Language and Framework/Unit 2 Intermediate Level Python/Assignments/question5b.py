@@ -10,6 +10,5 @@ list2 = [5,6,7,4,2]
 
 
 
-# can we chain the two comprehnsion in 1 lets try 
 result = [x*y for x,y in zip(list1, list2)]
 print(result)
