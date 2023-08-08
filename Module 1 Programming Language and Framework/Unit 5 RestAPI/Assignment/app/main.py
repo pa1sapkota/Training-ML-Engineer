@@ -21,4 +21,3 @@ app = FastAPI()
 
 @app.put("/employees/{employee_id}/{column}/{new_value}")
 # update the table using employeeid and set new value of a column
-
