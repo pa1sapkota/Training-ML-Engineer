@@ -5,3 +5,9 @@ strings.
 
 '''
 
+string_1 = "test"
+string_2 = "talk"
+
+common_chars = {char for char in string_1 if char in string_2}
+
+print(common_chars)
