@@ -1,8 +1,6 @@
 from pydantic import BaseModel
 
-class EmployeeCreate(BaseModel):
+class Employee(BaseModel):
+    id: int
     name: str
     department: str
-
-class Employee(EmployeeCreate):
-    id: int
