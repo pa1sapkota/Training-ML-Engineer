@@ -67,5 +67,6 @@ customer.add_to_cart(product1, 1)
 customer.add_to_cart(product2, 2)
 customer.checkout()
 
+
 customer.add_to_cart(product1, -1)
 customer.remove_from_cart(product2, 3) 
