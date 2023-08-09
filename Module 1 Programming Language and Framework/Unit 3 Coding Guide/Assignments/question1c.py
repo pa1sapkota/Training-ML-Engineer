@@ -5,7 +5,9 @@ how the program works”.
 
 
 '''
-
+class Account(): 
+    def __init__(self, balance): 
+        self.balance = balance
 
 
 class SavingsAccount():
